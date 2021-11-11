@@ -1,5 +1,37 @@
 body {
+  background-color: grey;
   margin: 20% auto;
   width: 50%;
   height: 75%;
 }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "numbers functions"
+    "result equalclear";
+}
+
+.numbers { 
+display:flex;  
+grid-area: numbers;
+color:rgb(117, 36, 117);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: x-large; }
+
+.functions { display:flex; grid-area: functions;
+align-items: center;
+justify-content: center;
+background-color:  rgb(233, 150, 191);
+justify-content:space-between;
+ }
+
+.result { grid-area: result; }
+
+.equalclear { display:flex;
+   grid-area: equalclear; 
+  justify-content: center;
+justify-content: space-evenly;}
